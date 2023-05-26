@@ -1,0 +1,72 @@
+<!--первое задание -->
+<!--<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="myBean" class="org.example.task1.MyBean"/>
+ </beans> -->
+
+
+<!-- 2 задание-->
+<!--<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="myBean1" class="org.example.task2.MyBean1" factory-method="createInstance">
+    </bean>
+
+    <bean id="myBean2" class="org.example.task2.MyBean2" init-method="init" destroy-method="destroy">
+    </bean>
+
+
+</beans> -->
+
+<!-- задание 3-->
+<!--<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="Bean" class="org.example.task3.Bean"
+        p:age="18" p:name="Igor"/>
+
+</beans> -->
+
+<!-- задание 4
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="Bean" class="org.example.task4.Bean">
+        <property name="list">
+            <list>
+                <value>lalalla</value>
+                <value>Wowowow</value>
+                <value>Nice</value>
+            </list>
+        </property>
+    </bean>
+</beans>
+-->
+<!-- Задание 5
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="Bean" class="org.example.task5.Bean">
+        <property name="name">
+            <null/>
+        </property>
+    </bean>
+</beans>
+-->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="Bean" class="org.example.task6.Bean">
+        <property name="pi" value="#{T(java.lang.Math).PI}"/>
+                <property name="message" value="#{'Good'}"/>
+                <property name="count" value="#{30/6}"/>
+                <property name="value" value="#{Bean.count gt 12331}"/>
+    </bean>
+</beans>
